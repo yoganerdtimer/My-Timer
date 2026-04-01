@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Timer - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .rate-us {
+            margin: 16px 0 24px;
+        }
+        
+        .stars-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin: 12px 0;
+        }
+        
+        .star-btn {
+            font-size: 32px;
+            line-height: 1;
+            padding: 8px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        
+        .star-btn:hover, .star-btn:focus {
+            background: #fff9c4;
+            border-color: #ffc107;
+            outline: none;
+        }
+        
+        .star-btn.selected {
+            background: #fff9c4;
+            border-color: #ffc107;
+        }
+        
+        #rateMessage {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+            border-left: 4px solid transparent;
+        }
+        
+        #rateMessage.show {
+            display: block;
+            color: #212121;
+        }
+        
+        #rateMessage.show strong {
+            color: #0d47a1;
+        }
+        
+        /* Light backgrounds from JS — keep dark text (overrides dark-mode strong { color: #fff }) */
+        #rateMessage.show.msg-blue {
+            background: #e3f2fd;
+            border-left-color: #2196F3;
+            color: #1565c0;
+        }
+        
+        #rateMessage.show.msg-blue strong {
+            color: #0d47a1;
+        }
+        
+        #rateMessage.show.msg-green {
+            background: #e8f5e9;
+            border-left-color: #4CAF50;
+            color: #1b5e20;
+        }
+        
+        #rateMessage.show.msg-green strong {
+            color: #1b5e20;
+        }
+        
+        #feedbackForm {
+            display: none;
+            margin-top: 16px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        #feedbackForm.show {
+            display: block;
+        }
+        
+        #feedbackForm label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        
+        #feedbackForm textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        
+        .btn-submit {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .btn-submit:hover {
+            background: #43a047;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            
+            .container {
+                background: #1e1e1e;
+            }
+            
+            h1, h2 {
+                color: #ffffff;
+            }
+            
+            .highlight-box {
+                background: #2a2a2a;
+            }
+            
+            .info-box {
+                background: #2a2a2a;
+            }
+            
+            strong {
+                color: #ffffff;
+            }
+            
+            /* Rate message uses light panels — text must stay dark for contrast */
+            #rateMessage.show,
+            #rateMessage.show strong {
+                color: #212121 !important;
+            }
+            
+            #rateMessage.show.msg-blue,
+            #rateMessage.show.msg-blue strong {
+                color: #1565c0 !important;
+            }
+            
+            #rateMessage.show.msg-blue strong {
+                color: #0d47a1 !important;
+            }
+            
+            #rateMessage.show.msg-green,
+            #rateMessage.show.msg-green strong {
+                color: #1b5e20 !important;
+            }
+            
+            .star-btn {
+                background: #2a2a2a;
+                border-color: #444;
+                color: #e0e0e0;
+            }
+            
+            .star-btn:hover, .star-btn:focus, .star-btn.selected {
+                background: #3d3d00;
+                border-color: #ffc107;
+            }
+            
+            #feedbackForm {
+                background: #2a2a2a;
+            }
+            
+            #feedbackForm label {
+                color: #e0e0e0;
+            }
+            
+            #feedbackForm textarea {
+                background: #1e1e1e;
+                color: #e0e0e0;
+                border-color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Privacy Policy</h1>
+        <p class="last-updated">Last Updated: <strong id="currentDate"></strong> · App version <strong>1.30</strong></p>
+        
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Welcome to Yoga Timer. We are committed to protecting your privacy and ensuring transparency about how we handle your data. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your personal data.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Key Principle:</strong> Yoga Timer is designed with privacy in mind. Your yoga timers and settings are stored locally on your device. Optional features—full-screen ads via <strong>Google AdMob</strong> and in-app purchases via <strong>Google Play Billing</strong>—use Google’s services and may involve network access and identifiers as described below.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Information We Collect</h2>
+            
+            <h3>Data Stored Locally on Your Device</h3>
+            <p>Yoga Timer stores the following information locally on your device:</p>
+            <ul>
+                <li><strong>Yoga Timer Configurations:</strong> Names, number of poses, and intervals for timers you create</li>
+                <li><strong>App Settings:</strong> Your preferences for sound, dark mode, and other app settings</li>
+                <li><strong>Active Timer State:</strong> Current timer progress, pose number, and time remaining (only while a timer is active)</li>
+            </ul>
+            
+            <div class="info-box">
+                <p><strong>Important:</strong> All this data is stored locally on your device using Android's built-in storage mechanisms (Room Database and SharedPreferences). We do not have access to this data, and it never leaves your device unless you explicitly share it or back up your device.</p>
+            </div>
+            
+            <h3>Data We Do NOT Collect (on our own)</h3>
+            <p>We do not run our own servers for Yoga Timer and we do not ask you to create an account in the app. We do not collect your name, email, or phone number for our own use.</p>
+            <ul>
+                <li><strong>Location:</strong> We do not collect GPS or precise location.</li>
+                <li><strong>Our analytics:</strong> We do not add separate analytics SDKs beyond what Google provides through ads and the Play Store as described below.</li>
+            </ul>
+            <p><strong>When ads or purchases are used:</strong> <strong>Google AdMob</strong> and <strong>Google Play</strong> may process device and advertising-related data according to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a>. That can include use of the advertising identifier for advertising and related analytics, subject to your device and Google account settings.</p>
+        </div>
+        
+        <div class="section">
+            <h2>How We Use Your Information</h2>
+            
+            <h3>Local Data Usage</h3>
+            <p>The data stored on your device is used solely for:</p>
+            <ul>
+                <li>Storing and managing your yoga timer configurations</li>
+                <li>Maintaining your app preferences (sound, dark mode, etc.)</li>
+                <li>Preserving timer state when you pause or temporarily close the app</li>
+                <li>Providing the core functionality of the app</li>
+            </ul>
+            
+            <h3>What we don’t do with your local timer data</h3>
+            <p>We do not sell your yoga timer configurations, and we do not upload them to servers we operate. We do not use your locally stored timers for marketing.</p>
+            <p>Google’s services (AdMob, Play Billing, Play distribution) are subject to Google’s policies. When you view an ad or complete a purchase, Google may process data as described in their documentation and privacy policy.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Data Storage and Security</h2>
+            
+            <h3>Local Storage</h3>
+            <p>All data is stored locally on your device using:</p>
+            <ul>
+                <li><strong>Room Database:</strong> For storing your yoga timer configurations</li>
+                <li><strong>SharedPreferences:</strong> For storing app settings (sound, theme), data used for the <strong>48-hour</strong> ad schedule (e.g. first-launch time and last time an App Open ad was shown), and a local flag for whether you purchased <strong>Remove ads</strong> (kept in sync with Google Play when possible)</li>
+            </ul>
+            
+            <h3>Security Measures</h3>
+            <ul>
+                <li>Your timer and settings data is stored in your device’s private app storage, accessible only by Yoga Timer</li>
+                <li>Internet access may be used when you load ads (AdMob), complete purchases (Google Play), or open links (e.g. help) in a browser—those flows are handled by Google or your browser, not by servers we operate</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Your Control:</strong> You have complete control over your data. You can delete individual timers in the app or clear all app data through Android Settings → Apps → Yoga Timer → Storage → Clear Data.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Permissions</h2>
+            
+            <p>Yoga Timer does not request sensitive permissions (location, camera, microphone, contacts, etc.). Your timer data stays on your device. The app may use the network connection for optional advertising (see below), in-app purchases processed by Google Play, and opening help links in a browser.</p>
+            
+            <p>Most app data is stored in the app's private storage, which Android grants automatically.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Advertising &amp; purchases</h2>
+            
+            <h3>Advertising identifier &amp; compliance</h3>
+            <p><strong>Advertising identifier:</strong> Where applicable, use of the advertising identifier (and related ad technologies) is limited to <strong>advertising</strong> and, where supported by the ad platform, <strong>user analytics</strong> tied to those services. We respect your choices, including Android and Google ad personalization and opt-out settings. We do not combine the advertising identifier with personally identifiable information unless we obtain appropriate consent where required. This policy describes our practices clearly; see also Google’s policies linked below.</p>
+            
+            <h3>App Open ads (AdMob) and 48-hour frequency</h3>
+            <p>Yoga Timer may show <strong>App Open</strong> (full-screen) advertisements served by <strong>Google AdMob</strong> when your device is <strong>online</strong>. App Open ads may appear when you launch or return to the app in line with our implementation and Google’s formats.</p>
+            <p><strong>Frequency:</strong> We use a <strong>48-hour</strong> window:</p>
+            <ul>
+                <li>The <strong>first</strong> time you may see an ad is no earlier than <strong>48 hours</strong> after the app records your <strong>first launch</strong> on this installation.</li>
+                <li>After an ad has been <strong>displayed</strong>, the next eligible ad is no earlier than <strong>48 hours</strong> later (measured from when the ad was shown).</li>
+            </ul>
+            <p>If you purchase <strong>Remove ads</strong>, we do not request App Open ads for your install. AdMob may use identifiers and device data as described in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a>. You can limit ad personalization in your Google account or device settings.</p>
+            
+            <h3>One-time in-app purchase (Remove ads)</h3>
+            <p><strong>Remove ads</strong> is an optional <strong>one-time</strong> (non-subscription) purchase processed by <strong>Google Play Billing</strong>. Google handles payment and receipt validation; <strong>we do not receive your full card details</strong>. Purchase state may be stored locally on your device and synchronized with Google Play when you use <strong>Restore purchase</strong> or reinstall on a device signed into the same Google account.</p>
+            <p>Product availability and pricing are set in <strong>Google Play Console</strong>; you should install the app from the <strong>Google Play Store</strong> for purchases to work as intended.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Third-Party Services</h2>
+            <p>Besides AdMob and Google Play (billing and app distribution), Yoga Timer does not integrate additional analytics or social SDKs. Core timer features work without an account; only ads and purchases require Google’s services when you use those features.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Children's Privacy</h2>
+            <p>Yoga Timer’s core features (local timers) do not require an account. If the app shows ads, Google’s ad services may apply age-related and personalization rules per Google’s policies and your device settings. Parents and guardians can use device and Google account controls for ads, and may use <strong>Remove ads</strong> (one-time purchase) to avoid ad content in the app.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Data Deletion</h2>
+            
+            <h3>How to Delete Your Data</h3>
+            <p>You can delete your data in the following ways:</p>
+            <ul>
+                <li><strong>Delete Individual Timers:</strong> Use the delete button in the app to remove specific timers</li>
+                <li><strong>Clear App Data:</strong> Go to Android Settings → Apps → Yoga Timer → Storage → Clear Data to remove all timers and settings</li>
+            </ul>
+            
+            <div class="info-box">
+                <p><strong>Note:</strong> Clearing app data will permanently remove all your timers and settings. This action cannot be undone.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the app and the "Last Updated" date will be modified. We encourage you to review this policy periodically to stay informed about how we protect your privacy.</p>
+            
+            <p>If we make significant changes to this policy, we will notify users through the app or app store listing.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Your Rights</h2>
+            <p>Since all data is stored locally on your device, you have complete control over your information:</p>
+            <ul>
+                <li><strong>Access:</strong> You can view all your data directly in the app</li>
+                <li><strong>Modify:</strong> You can edit or delete timers and change settings at any time</li>
+                <li><strong>Delete:</strong> You can delete all data by clearing app data in Android settings (Settings → Apps → Yoga Timer → Storage → Clear Data)</li>
+                <li><strong>Portability:</strong> Your data is stored in standard Android formats and can be accessed through device backups</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Rate us</h2>
+            <p>How would you rate Yoga Timer?</p>
+            <div class="rate-us">
+                <div class="stars-row" id="starRow" role="group" aria-label="Rate from 1 to 5 stars">
+                    <button type="button" class="star-btn" data-rating="1" aria-label="1 star">★</button>
+                    <button type="button" class="star-btn" data-rating="2" aria-label="2 stars">★★</button>
+                    <button type="button" class="star-btn" data-rating="3" aria-label="3 stars">★★★</button>
+                    <button type="button" class="star-btn" data-rating="4" aria-label="4 stars">★★★★</button>
+                    <button type="button" class="star-btn" data-rating="5" aria-label="5 stars">★★★★★</button>
+                </div>
+                <div id="rateMessage" role="status" aria-live="polite"></div>
+                <div id="feedbackForm">
+                    <label for="feedbackText">Share your thoughts—what you like, what we could improve, or features you’d like:</label>
+                    <textarea id="feedbackText" placeholder="Your suggestions…" maxlength="8000"></textarea>
+                    <button type="button" class="btn-submit" id="sendFeedbackBtn">Send by email</button>
+                    <p style="font-size: 13px; color: #666; margin-top: 12px; margin-bottom: 0;">Opens your email app with your message addressed to us. You can edit before sending.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>For questions about this Privacy Policy or how we handle your data, email us at:</p>
+            <p><a href="mailto:yoganerdtimer@gmail.com">yoganerdtimer@gmail.com</a></p>
+            
+            <div class="highlight-box">
+                <p><strong>Our Commitment:</strong> We are committed to maintaining your privacy and will respond to any privacy-related inquiries promptly and transparently.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Consent</h2>
+            <p>By using Yoga Timer, you consent to this Privacy Policy. If you do not agree with any part of this policy, you may stop using the app and delete it from your device.</p>
+        </div>
+        
+        <div class="section">
+            <p style="text-align: center; color: #666; margin-top: 40px;">
+                <strong>Thank you for using Yoga Timer!</strong><br>
+                We respect your privacy and are committed to keeping your data safe and secure.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        (function () {
+            var FEEDBACK_EMAIL = 'yoganerdtimer@gmail.com';
+
+            document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            var starRow = document.getElementById('starRow');
+            var rateMessage = document.getElementById('rateMessage');
+            var feedbackForm = document.getElementById('feedbackForm');
+            var feedbackText = document.getElementById('feedbackText');
+            var sendFeedbackBtn = document.getElementById('sendFeedbackBtn');
+
+            function clearStarSelection() {
+                var btns = starRow.querySelectorAll('.star-btn');
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].classList.remove('selected');
+                }
+            }
+
+            starRow.addEventListener('click', function (e) {
+                var btn = e.target.closest('.star-btn');
+                if (!btn) return;
+                var rating = parseInt(btn.getAttribute('data-rating'), 10);
+                clearStarSelection();
+                btn.classList.add('selected');
+
+                rateMessage.classList.add('show');
+                feedbackForm.classList.remove('show');
+                feedbackText.value = '';
+
+                rateMessage.classList.remove('msg-blue', 'msg-green');
+
+                var msg;
+                if (rating >= 4) {
+                    msg = '<strong>Thank you for the high rating!</strong> Optional: share what you enjoy or any suggestions—use the form below. Your message will open in your email app to <strong>yoganerdtimer@gmail.com</strong>.';
+                    rateMessage.classList.add('msg-green');
+                } else {
+                    msg = '<strong>Thanks for your feedback.</strong> Please tell us how we can improve or suggest features—use the form below. Your message will open in your email app to <strong>yoganerdtimer@gmail.com</strong>.';
+                    rateMessage.classList.add('msg-blue');
+                }
+                rateMessage.innerHTML = msg;
+                rateMessage.style.background = '';
+                rateMessage.style.borderLeft = '';
+                feedbackForm.classList.add('show');
+            });
+
+            sendFeedbackBtn.addEventListener('click', function () {
+                var body = feedbackText.value.trim();
+                if (!body) {
+                    alert('Please enter your suggestions before sending.');
+                    return;
+                }
+                var subject = encodeURIComponent('Yoga Timer — Feature suggestions');
+                var mailBody = encodeURIComponent(body);
+                window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + subject + '&body=' + mailBody;
+            });
+        })();
+    </script>
+</body>
+</html>
