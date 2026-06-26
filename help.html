@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Timer - Help & User Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-box {
+            background: #f8f9fa;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .tip {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #000;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #000;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            
+            .container {
+                background: #1e1e1e;
+            }
+            
+            h1, h2 {
+                color: #ffffff;
+            }
+            
+            .feature-box {
+                background: #2a2a2a;
+            }
+            
+            .tip {
+                background: #1a237e;
+                color: #e0e0e0;
+            }
+            
+            .warning {
+                background: #3d3000;
+                color: #e0e0e0;
+            }
+            
+            code {
+                background: #2a2a2a;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧘 Yoga Timer - Help & User Guide</h1>
+        <p class="app-version" style="color:#666;font-size:14px;margin-bottom:20px;">App version <strong>2.0</strong></p>
+        
+        <div class="section">
+            <h2>Welcome to Yoga Timer</h2>
+            <p>Yoga Timer helps you stay focused during yoga practice by timing each pose and ringing a bell at transitions. Create custom flows with one or more sections, each with its own poses and intervals.</p>
+            <div class="feature-box">
+                <p><strong>What’s new in 2.0:</strong> Redesigned running timer with wavy progress bars, multi-section sessions, a first-run onboarding guide, improved landscape layout, and bell sound tied to your device <strong>alarm</strong> volume.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Creating a Timer</h2>
+            
+            <h3>Start the wizard</h3>
+            <ol>
+                <li>On <strong>first launch</strong>, a welcome screen appears once with tips and a <strong>Create Timer</strong> button (or tap <strong>Cancel</strong> to go to an empty timer list)</li>
+                <li>After that, tap the green <strong>+</strong> button next to <strong>My Yoga Timers</strong> to add more timers</li>
+                <li>Enter a <strong>timer name</strong> (e.g. “Morning Flow”)</li>
+                <li>Choose how many <strong>sections</strong> your session has (1–7) using the colored number chips</li>
+                <li>Tap <strong>Next</strong> to configure each section</li>
+            </ol>
+            
+            <h3>Configure each section</h3>
+            <p>For every section you can set:</p>
+            <ul>
+                <li><strong>Section name</strong> (e.g. “Warm up”, “Standing poses”)</li>
+                <li><strong>Number of poses</strong> (1–100) using the slider, stepper, or quick picks: <strong>5, 20, 30, 40, 50</strong></li>
+                <li><strong>Interval per pose</strong> (3 seconds to 20 minutes) using the slider, stepper, or quick picks: <strong>10s, 45s, 1m, 1m30s, 2m</strong></li>
+            </ul>
+            <p>Use <strong>Next</strong> to move through sections. On the last section, tap <strong>Finish</strong> (or <strong>Save</strong> when editing).</p>
+            
+            <div class="tip">
+                <strong>💡 Tip:</strong> A single-section timer works like a classic yoga timer. Use multiple sections when you want different pose counts or intervals for warm-up, main practice, and cool-down.
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Starting &amp; Running a Session</h2>
+            
+            <h3>Start</h3>
+            <ol>
+                <li>Find your timer in <strong>My Yoga Timers</strong></li>
+                <li>Tap the green <strong>Play</strong> button on the timer card</li>
+                <li>The active session appears at the top of the list with a bell at the first pose</li>
+            </ol>
+            
+            <h3>During a session</h3>
+            <div class="feature-box">
+                <p><strong>Active session display</strong> shows:</p>
+                <ul>
+                    <li><strong>Current pose</strong> — time remaining, wavy progress bar, and “Pose X of Y”</li>
+                    <li><strong>Total session time remaining</strong> — overall countdown and session progress bar</li>
+                    <li><strong>Sections list</strong> — all sections with the current one highlighted</li>
+                    <li><strong>Controls</strong> — <strong>Pause</strong> (amber), <strong>Resume</strong> (green), and <strong>Stop</strong> (red)</li>
+                </ul>
+            </div>
+            
+            <h3>Landscape mode</h3>
+            <p>When you rotate to landscape during a session:</p>
+            <ul>
+                <li><strong>Multi-section timers:</strong> Progress bars use most of the screen (about 72% width); a compact sections list on the right shows the section number and name, with the current section highlighted</li>
+                <li><strong>Single-section timers:</strong> The sections list is hidden; progress bars use the full width for a cleaner view</li>
+            </ul>
+            <p>Portrait layout is unchanged and always shows the full sections list when your timer has more than one section.</p>
+            
+            <h3>Pause, resume, and stop</h3>
+            <ul>
+                <li><strong>Pause</strong> — temporarily stops the countdown; session state is saved</li>
+                <li><strong>Resume</strong> — continues from where you left off</li>
+                <li><strong>Stop</strong> — ends the session and clears active timer state</li>
+                <li>When the session completes, tap the red <strong>Done</strong> button</li>
+            </ul>
+            
+            <div class="tip">
+                <strong>💡 Tip:</strong> You can switch apps or lock the screen while a session runs. The timer keeps going in the background, and the bell still plays at pose changes (if sound is enabled).
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Managing Timers</h2>
+            
+            <h3>Edit a timer</h3>
+            <ol>
+                <li>Tap the timer card, <strong>or</strong> open the <strong>⋮</strong> menu and choose <strong>Edit</strong></li>
+                <li>Walk through the same wizard to change the name, section count, or section details</li>
+                <li>Tap <strong>Save</strong> when finished</li>
+            </ol>
+            
+            <div class="warning">
+                <strong>⚠️ Note:</strong> If you edit a timer that is currently running, the session restarts from the beginning with the new settings.
+            </div>
+            
+            <h3>Delete a timer</h3>
+            <ol>
+                <li>Open the <strong>⋮</strong> menu on the timer card</li>
+                <li>Choose <strong>Delete</strong></li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Settings</h2>
+            
+            <h3>Open settings</h3>
+            <p>Tap the <strong>gear icon</strong> (⚙️) at the top of the main screen. Settings open as an overlay; use the back arrow or your device’s back button to return to your timers.</p>
+            
+            <h3>App settings</h3>
+            <ul>
+                <li><strong>Sound:</strong> Bell at each pose transition (uses your device <strong>alarm</strong> volume; respects Do Not Disturb / call state where applicable)</li>
+                <li><strong>Dark Mode:</strong> Light or dark theme</li>
+            </ul>
+            
+            <h3>Support &amp; legal</h3>
+            <ul>
+                <li><strong>Help &amp; How-to:</strong> Opens this guide</li>
+                <li><strong>Privacy Policy:</strong> How data is handled, including optional ads and purchases</li>
+                <li><strong>Contact Us:</strong> Email the developer</li>
+            </ul>
+            
+            <h3>Remove ads</h3>
+            <p>Optional one-time purchase through Google Play. See the <strong>Ads &amp; in-app purchase</strong> section below.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Ads &amp; in-app purchase (Remove ads)</h2>
+            
+            <h3>What kind of ads</h3>
+            <p>Yoga Timer uses <strong>Google AdMob</strong> <strong>App Open</strong> ads—full-screen ads that may appear when you open the app (often after a <strong>cold start</strong>, when the app was not running in the background). Ads load only when your device is <strong>online</strong>.</p>
+            
+            <h3>How often (48-hour schedule)</h3>
+            <ul>
+                <li><strong>First ad:</strong> No earlier than <strong>48 hours</strong> after the app records your <strong>first launch</strong> on this installation</li>
+                <li><strong>Later ads:</strong> At least <strong>48 hours</strong> after the previous ad was <strong>shown</strong></li>
+            </ul>
+            <p>If an ad fails to load (e.g. no network), nothing is counted as shown—you may see an ad on a later launch when the schedule allows.</p>
+            
+            <h3>Remove ads (one-time purchase)</h3>
+            <p>In <strong>Settings</strong>, buy <strong>Remove ads</strong> once through <strong>Google Play Billing</strong>. Google handles payment; we do not receive your full card number.</p>
+            <ul>
+                <li>After purchase, the app stops requesting App Open ads</li>
+                <li>Use <strong>Restore purchase</strong> if you reinstall or use another device signed in to the <strong>same Google account</strong></li>
+            </ul>
+            <p>Install the app from the <strong>Google Play Store</strong> for purchases to work as intended.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Understanding the Display</h2>
+            
+            <h3>Pose progress</h3>
+            <ul>
+                <li>Countdown for the <strong>current pose</strong></li>
+                <li>Wavy gradient progress bar for the current pose interval</li>
+                <li>Percentage complete for the current pose</li>
+            </ul>
+            
+            <h3>Session progress</h3>
+            <ul>
+                <li><strong>Total session time remaining</strong> for the entire flow (all sections)</li>
+                <li>Session progress bar and overall completion percentage</li>
+            </ul>
+            
+            <h3>Sections list</h3>
+            <p>Each section shows its name, pose count, and interval (portrait). The active section is highlighted with a colored border and background. In landscape, the list is compact—badge and name only—and hidden entirely for single-section timers.</p>
+            
+            <div class="feature-box">
+                <p><strong>Example:</strong> One section with 10 poses at 30s each = 5 minutes total. The bell rings at the start of each new pose.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Tips for Best Experience</h2>
+            <ul>
+                <li><strong>Prepare your space</strong> before you tap Play</li>
+                <li><strong>Keep the device nearby</strong> so you can hear the bell without watching the screen</li>
+                <li><strong>Use quick picks</strong> when creating timers for common pose counts and intervals</li>
+                <li><strong>Try landscape</strong> on a tablet or stand to see progress and sections side by side</li>
+                <li><strong>Start with shorter intervals</strong> and increase as you progress</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <h3>Q: Can I use the app in the background?</h3>
+            <p>A: Yes. A running session continues when you switch apps or lock the screen. A notification shows session progress while the timer runs.</p>
+            
+            <h3>Q: What if I close the app during a session?</h3>
+            <p>A: Progress is saved automatically. When you reopen the app, the active session resumes if it was still running or paused.</p>
+            
+            <h3>Q: Can I have multiple timers?</h3>
+            <p>A: Yes. Create as many timers as you like for different practices.</p>
+            
+            <h3>Q: Why don't I hear the bell?</h3>
+            <p>A: The bell uses your device <strong>alarm</strong> volume (not media or ringtone). Turn up alarm volume, ensure <strong>Sound</strong> is on in Settings, and check that the device is not in silent or Do Not Disturb mode (or in a call, where the app may skip the bell).</p>
+            
+            <h3>Q: Does the app work offline?</h3>
+            <p>A: <strong>Yes for timers.</strong> Creating and running sessions, sounds, and settings work offline. Internet is needed only for ads (if you have not purchased Remove ads), in-app purchase or restore, or opening Help/Privacy in a browser.</p>
+            
+            <h3>Q: How often do ads appear?</h3>
+            <p>A: About every <strong>48 hours</strong> on a rolling schedule, if you have not bought Remove ads, you are online, and an ad loads successfully.</p>
+            
+            <h3>Q: How do I remove ads?</h3>
+            <p>A: Open <strong>Settings</strong> → <strong>Remove ads (one-time purchase)</strong>. Use <strong>Restore purchase</strong> after reinstall or on another device with the same Google account.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Support</h2>
+            <p>Questions or suggestions? Email <a href="mailto:yoganerdtimer@gmail.com">yoganerdtimer@gmail.com</a>.</p>
+            <p>We hope Yoga Timer supports your practice! 🧘</p>
+        </div>
+    </div>
+</body>
+</html>
